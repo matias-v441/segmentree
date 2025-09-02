@@ -1,0 +1,13 @@
+name: segtree-dev
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - pip
+  - rust>=1.76 
+  - maturin>=1.5
+  - pytest>=8
+
+  - pip:
+      - -e .[dev]
