@@ -5,8 +5,12 @@ edition = "2021"
 
 [lib]
 name = "segtree_native"
-crate-type = ["cdylib"]
+crate-type = ["rlib", "cdylib"]
+
+[features]
+python = ["dep:pyo3", "pyo3/extension-module", "pyo3/abi3-py311"]
 
 [dependencies]
-pyo3 = { version = "0.21", features = ["extension-module", "abi3-py311"] }
+pyo3 = { version = "0.21", optional=true}
 thiserror = "2.0.16"
+
