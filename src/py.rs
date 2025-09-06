@@ -19,6 +19,7 @@ impl IntoPy<PyObject> for core::Stats {
         let d = PyDict::new_bound(py);
         d.set_item("length", self.length).unwrap();
         d.set_item("max_ovp", self.max_ovp).unwrap();
+        d.set_item("min_ovp", self.min_ovp).unwrap();
         d.into_py(py)
     }
 }
